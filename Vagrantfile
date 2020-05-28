@@ -1,18 +1,23 @@
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "base"
-  
+  config.vm.box = "ubuntu/xenial64"
 
-Vagrant.configure("2") do |config|
-        config.vm.define :apache do |web|
-            web.vm.box = "ubunt/xenial64"
-            web.vm.provision :shell, path: "config_web.sh"
-            web.vm.hostname = "srv-web"
-            web.vm.network :forwarded_port, guest: 80, host: 4567
-            web.vm.network "public_network", bridge: "en0: WLAN (AirPort)"
-		end
-    end 
+  config.vm.box_check_update = false
 
+  config.vm.network "private_network", ip: "192.168.33.10"
+
+  config.vm.provider "virtualbox" do |vb|
+
+     vb.gui = false
+
+     vb.memory = "1024"
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+     apt-get update
+     apt-get install -y apache2
+   SHELL
+end
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
