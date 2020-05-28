@@ -10,6 +10,7 @@ Vagrant.configure("2") do |config|
             web.vm.hostname = "srv-web"
             web.vm.network :forwarded_port, guest: 80, host: 4567
             web.vm.network "public_network", bridge: "en0: WLAN (AirPort)"
+		end
     end 
 
 
