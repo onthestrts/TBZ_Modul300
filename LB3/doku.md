@@ -108,7 +108,7 @@ Im nächsten Schritt wird das Directory angelegt in dem dann der Docker Containe
     
     
 **Die Mitte:**   
-Hier wird eigentlich einfach das Docker File geschrieben. Hier stehen die ganzen Konfigurationen gemacht zur DB und auch gleich zu Wordpress. Wir haben es so eingestellt, dass wir jeweils immer die neuste verfügbaren Versionen von WordPress und MYSQL gezogen werden.
+Hier wird eigentlich einfach das Docker File geschrieben. Hier stehen die ganzen Konfigurationen gemacht zur DB und auch gleich zu Wordpress. Wir haben es so eingestellt, dass wir jeweils immer die neuste verfügbaren Versionen von WordPress und MYSQL gezogen werden. Natürlich müssen hier die Passwörter abgeändert werden (überall wo ### steht).
 
     cat <<EOT >> /home/vagrant/docker/lb3/docker-compose.yml
     version: '2'
