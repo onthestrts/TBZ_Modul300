@@ -1,4 +1,4 @@
-# LB3 - WordPress automatisch aufbauen
+# LB3 - WordPress automatisieren (Schmed, Kärcher)
 Wir haben über Vagrant eine vollautomatischer Aufbau einer VM mit einer WordPress installation gebaut. Diese WordPress installation wird vollautomatisch in einem Docker Container aufgebaut. Dabei wird eine DB erstellt worin dann die Einstellungen, Benutzer etc. gespeichert werden.
 Die Meinung ist, dass man nur das Vagrant script mit
 
