@@ -1,3 +1,7 @@
+# Modul 300 - TBZ
+# Flurin Kärcher
+# Date: 06.07.2020
+
 apt-get update
 apt-get install -y docker.io
 apt-get install -y docker-compose
