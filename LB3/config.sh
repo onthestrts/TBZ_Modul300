@@ -38,4 +38,5 @@ services:
 volumes:
     db_data: {}
 EOT
+docker-compose /home/vagrant/docker/lb3/docker-compose.yml up -d
 
