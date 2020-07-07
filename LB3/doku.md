@@ -144,3 +144,20 @@ Hier im letzten Schritt wird nur noch das .yml File kompiliert und der Container
     docker-compose /home/vagrant/docker/lb3/docker-compose.yml up -d
 
 
+## Wordpress it self
+Wordpress an sich ist dann nicht mehr schwierig. Man muss nur noch herausfinden welche IP-Adresse die Vagrant-VM hat.
+Dies kann man über verschiedene Arten machen:
+
+ - Auf den lokalen Router (z.B. Zuhause) zugreifen und dort die Leases checken
+ - Eine Test-VM erstellen und diese dann in das genau gleiche Netz wie die Vagrant-VM stellen
+
+Bei unser Konfiguration ist es so, dass sie die Vagrant-VM automatisch per DHCP eine Adresse aus dem Host-Netz zieht.
+Was bedeutet das?
+Vagrant schaut in welchem netz der Host, also dein PC, ist und sucht sich dort via DHCP eine Adresse. So kann man sich dann ganz einfach verbinden.
+Das würde dann so aussehen (gemäss Beispielen oben):
+
+ - http://dhcp_ip-address:8000
+ - http://custom_fix-ip:8000
+
+
+
